@@ -1,6 +1,6 @@
 <?php 
-	include_once('module/haeder.php');
-	include_once(__DIR__.'/module/config.php');
+	include_once('model/haeder.php');
+	include_once(__DIR__.'/model/config.php');
 
     $phongsql = "SELECT * FROM dsphongtrong";
 

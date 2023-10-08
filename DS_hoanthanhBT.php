@@ -1,5 +1,5 @@
 <?php
-    include ('module/haeder.php');
+    include ('model/haeder.php');
 ?>
 <div class="mobile-menu-overlay"></div>
     <!-- bat dâu phân mên làm việc -->
@@ -24,7 +24,7 @@
         
         <div class="card-box mb-30 pd-10">
         <?php
-            include_once(__DIR__.'/module/config.php');
+            include_once(__DIR__.'/model/config.php');
 
             $loaidvsql = "SELECT * FROM hoanthanhbt";
 
@@ -92,5 +92,5 @@
         </div>
 
 <?php
-    include ('module/footter.php');
+    include ('model/footter.php');
 ?>

@@ -1,5 +1,5 @@
 <?php
-    include ('module/haeder.php');
+    include ('model/haeder.php');
 ?>
 <div class="main-container">				
 		<div class="pd-ltr-20">
@@ -9,7 +9,7 @@
 
             <div class="card-box mb-30">
                 <?php
-                    include_once(__DIR__.'/module/config.php');
+                    include_once(__DIR__.'/model/config.php');
 
                     $loaidvsql = "SELECT * FROM tblvattu";
 
@@ -44,7 +44,7 @@
 											<button  type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 										</div>
 										<div class="modal-body">
-											<form class="row m-4" action="./module/cf_addvattu.php" method="post">
+											<form class="row m-4" action="./model/cf_addvattu.php" method="post">
                                                 <div class="col-md-4 form-group">
                                                     <label for="mavt" class="form-label fw-bold">Mã VT : </label>
                                                     <input type="text" class="form-control" id="mavt" name="mavt" placeholder="vt01" required>
@@ -133,7 +133,7 @@
 									<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
 										<!-- <a class="dropdown-item" href="#"><i class="dw dw-eye"></i> View</a> -->
 										<a class="dropdown-item" href="edit_vattu.php?sid=<?php echo $row['mavt'];?>"><i class="dw dw-edit2"></i> Cập nhật</a>
-										<a onclick="return confirm('Bạn có muốn xoá thông tin này không ?');" class="dropdown-item" href="./module/cf_deletevattu.php?sid=<?php echo $row['mavt'];?>"><i class="dw dw-delete-3"></i> Xoá</a>            
+										<a onclick="return confirm('Bạn có muốn xoá thông tin này không ?');" class="dropdown-item" href="./model/cf_deletevattu.php?sid=<?php echo $row['mavt'];?>"><i class="dw dw-delete-3"></i> Xoá</a>            
 									</div>
 								</div>
 							</td>
@@ -144,5 +144,5 @@
 			</div>
 
 <?php
-    include ('module/footter.php');
+    include ('model/footter.php');
 ?>

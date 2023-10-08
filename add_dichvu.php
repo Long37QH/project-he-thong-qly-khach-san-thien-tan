@@ -1,6 +1,6 @@
-<?php include('module/haeder.php');
+<?php include('model/haeder.php');
 
-    require_once 'module/config.php';
+    require_once 'model/config.php';
 
 ?>
 
@@ -76,7 +76,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 mb-30">
                         <div class="pd-20 card-box height-100-p">
                         <h6 class="fw-bold text-center text-uppercase pt-4">Thêm mới dịch vụ</h6>
-                            <form class="row m-4" action="./module/cf_addDichvu.php" method="post">
+                            <form class="row m-4" action="./model/cf_addDichvu.php" method="post">
                                 <div class="form-group">
                                     <label for="madv" class="form-label fw-bold">Mã dịch vụ : </label>
                                     <input type="text" class="form-control" id="madv" name="madv"  required>
@@ -124,4 +124,4 @@
 				</div>
 			</div>
 
-<?php include('module/footter.php');?>
+<?php include('model/footter.php');?>

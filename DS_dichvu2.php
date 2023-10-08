@@ -1,5 +1,5 @@
 <?php
-    include ('module/haeder2.php');
+    include ('model/haeder2.php');
 ?>
 
 <div class="main-container">
@@ -10,7 +10,7 @@
 
             <div class="card-box mb-30">
                 <?php
-                    include_once(__DIR__.'/module/config.php');
+                    include_once(__DIR__.'/model/config.php');
 
                     $dsdvsql = "SELECT * FROM tbldichvu";
 
@@ -63,7 +63,7 @@
 									<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
 										<!-- <a class="dropdown-item" href="#"><i class="dw dw-eye"></i> View</a> -->
 										<a class="dropdown-item" href="#"><i class="dw dw-edit2"></i> Cập nhật</a>
-										<a onclick="return confirm('Bạn có muốn xoá dịch vụ này không ?');" class="dropdown-item" href="./module/cf_deleteDichvu.php?sid=<?php echo $row['madv'];?>"><i class="dw dw-delete-3"></i> Xoá</a>
+										<a onclick="return confirm('Bạn có muốn xoá dịch vụ này không ?');" class="dropdown-item" href="./model/cf_deleteDichvu.php?sid=<?php echo $row['madv'];?>"><i class="dw dw-delete-3"></i> Xoá</a>
 									</div>
 								</div>
 							</td>
@@ -74,5 +74,5 @@
 			</div>
 
 <?php
-    include ('module/footter2.php');
+    include ('model/footter2.php');
 ?>

@@ -1,6 +1,6 @@
 <?php 
-	include_once('module/haeder2.php');
-	include_once(__DIR__.'/module/config.php');
+	include_once('model/haeder2.php');
+	include_once(__DIR__.'/model/config.php');
 
     $phongsql = "SELECT * FROM dsphongtrong";
 
@@ -170,4 +170,4 @@
 				<!-- Simple Datatable End -->
 				
 				<!--phân footer  -->
-<?php include_once('module/footter2.php') ?>
+<?php include_once('model/footter2.php') ?>

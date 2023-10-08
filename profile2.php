@@ -1,4 +1,4 @@
-<?php include_once('module/haeder2.php')
+<?php include_once('model/haeder2.php')
 ?>
 
 <div class="main-container">
@@ -65,7 +65,7 @@
                     <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 mb-30">
 					<div class="pd-20 card-box height-100-p">
                         <h4 class="fw-bold text-center text-uppercase pt-4">Cập Nhật Thông Tin</h4>
-                        <form class="row m-4" action="./module/cf_editNV2.php" method="post">
+                        <form class="row m-4" action="./model/cf_editNV2.php" method="post">
                             <div class="form-group">
                                 <label for="ma_nhanvien" class="form-label fw-bold">Ma NV : </label>
                                 <input type="text" class="form-control" id="ma_nhanvien" name="ma_nhanvien" value="<?php echo $manv;?>" readonly>
@@ -128,4 +128,4 @@
 			</div>
 
 
-            <?php include('module/footter2.php') ?>
+            <?php include('model/footter2.php') ?>

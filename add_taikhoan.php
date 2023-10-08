@@ -1,5 +1,5 @@
-<?php include_once('module/haeder.php');
-    include_once(__DIR__.'/module/config.php');
+<?php include_once('model/haeder.php');
+    include_once(__DIR__.'/model/config.php');
 
     $dsdvsql = "SELECT tblnhanvien.ma_nhanvien, tblnhanvien.TenNV FROM tblnhanvien LEFT JOIN tbltaikhoan ON tblnhanvien.ma_nhanvien = tbltaikhoan.ma_nhanvien WHERE tbltaikhoan.ma_nhanvien IS NULL; ";
 
@@ -22,7 +22,7 @@
 				</div>
 				<!-- Default Basic Forms Start -->
 				<div class="pd-20 card-box mb-30">
-					<form class="row" action="./module/cf_addtaikhoan.php" method="post">
+					<form class="row" action="./model/cf_addtaikhoan.php" method="post">
 						<div class="form-group">
                                 <label for="tentk" class="form-label fw-bold">Tên Đăng Nhập : </label>
                                 <input type="text" class="form-control" id="tentk" name="tentk"  required>
@@ -55,4 +55,4 @@
 			</div>
 		</div>
 	</div>
-<?php include_once('module/footter.php') ?>
+<?php include_once('model/footter.php') ?>

@@ -1,10 +1,10 @@
-<?php include_once('module/haeder.php');
+<?php include_once('model/haeder.php');
 
 
 $MaNhaCC = $_GET['sid'];
 
-require_once 'module/config.php';
-//include_once(__DIR__.'/module/config.php');
+require_once 'model/config.php';
+//include_once(__DIR__.'/model/config.php');
 
 $sua_sql = "SELECT * FROM tblnhacc WHERE MaNhaCC = '$MaNhaCC'";
 
@@ -22,7 +22,7 @@ $row = mysqli_fetch_assoc($result);
 				</div>
 				<!-- Default Basic Forms Start -->
 				<div class="pd-20 card-box mb-30">
-					<form action="./module/cf_editNCC.php" method="post">
+					<form action="./model/cf_editNCC.php" method="post">
 						<div class="form-group row">
 							<label class="col-sm-12 col-md-2 col-form-label fw-bold">Mã Nhà Cung Cấp :</label>
 							<div class="col-sm-12 col-md-10">
@@ -58,7 +58,7 @@ $row = mysqli_fetch_assoc($result);
 				</div>
                 <div class="card-box mb-3">
 					<?php
-						include_once(__DIR__.'/module/config.php');
+						include_once(__DIR__.'/model/config.php');
 
 						$danhsach = "SELECT * FROM tblnhacc";
 
@@ -107,7 +107,7 @@ $row = mysqli_fetch_assoc($result);
 											<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
 												
 												<a class="dropdown-item" href="edit_Nhacc.php?sid=<?php echo $row['MaNhaCC'];?>"><i class="dw dw-edit2"></i> Edit</a>
-												<a class="dropdown-item" href="./module/cf_deleteNV.php?sid=<?php echo $row['MaNhaCC'];?>"><i class="dw dw-delete-3"></i> Delete</a>
+												<a class="dropdown-item" href="./model/cf_deleteNV.php?sid=<?php echo $row['MaNhaCC'];?>"><i class="dw dw-delete-3"></i> Delete</a>
 											</div>
 										</div>
 									</td>
@@ -121,4 +121,4 @@ $row = mysqli_fetch_assoc($result);
 			</div>
 		</div>
 	</div>
-<?php include_once('module/footter.php') ?>
+<?php include_once('model/footter.php') ?>

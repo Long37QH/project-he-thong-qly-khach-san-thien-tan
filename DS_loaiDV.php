@@ -1,4 +1,4 @@
-<?php include('module/haeder.php'); ?>
+<?php include('model/haeder.php'); ?>
 
 <div class="main-container">				
 		<div class="pd-ltr-20">
@@ -8,7 +8,7 @@
 
             <div class="card-box mb-30">
                 <?php
-                    include_once(__DIR__.'/module/config.php');
+                    include_once(__DIR__.'/model/config.php');
 
                     $loaidvsql = "SELECT * FROM tblloaidv";
 
@@ -41,7 +41,7 @@
 											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 										</div>
 										<div class="modal-body">
-											<form class="row m-4" action="./module/cf_addLoaiDV.php" method="post">
+											<form class="row m-4" action="./model/cf_addLoaiDV.php" method="post">
                                                 <div class="form-group">
                                                     <label for="maloaidv" class="form-label fw-bold">Mã Loại : </label>
                                                     <input type="text" class="form-control" id="maloaidv" name="maloaidv" placeholder="cb01" required>
@@ -101,7 +101,7 @@
 									<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
 										<!-- <a class="dropdown-item" href="#"><i class="dw dw-eye"></i> View</a> -->
 										<a class="dropdown-item" href="edit_LoaiDV.php?sid=<?php echo $row['maloaidv'];?>"><i class="dw dw-edit2"></i> Cập nhật</a>
-										<a onclick="return confirm('Bạn có muốn xoá thông tin này không ?');" class="dropdown-item" href="./module/cf_deleteLoaiDV.php?sid=<?php echo $row['maloaidv'];?>"><i class="dw dw-delete-3"></i> Xoá</a>            
+										<a onclick="return confirm('Bạn có muốn xoá thông tin này không ?');" class="dropdown-item" href="./model/cf_deleteLoaiDV.php?sid=<?php echo $row['maloaidv'];?>"><i class="dw dw-delete-3"></i> Xoá</a>            
 									</div>
 								</div>
 							</td>
@@ -111,6 +111,6 @@
 				</table>
 			</div>
             
-            <?php include ('module/footter.php') ;?>
+            <?php include ('model/footter.php') ;?>
 
 

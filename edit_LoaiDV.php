@@ -1,9 +1,9 @@
-<?php include('module/haeder.php');
+<?php include('model/haeder.php');
 
     $maloaidv = $_GET['sid'];
 
-    require_once 'module/config.php';
-    //include_once(__DIR__.'/module/config.php');
+    require_once 'model/config.php';
+    //include_once(__DIR__.'/model/config.php');
 
     $sua_sql = "SELECT * FROM tblloaidv WHERE maloaidv = '$maloaidv'";
 
@@ -35,7 +35,7 @@
 					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 mb-30">
                         <div class="pd-20 card-box height-100-p">
                         <h6 class="fw-bold text-center text-uppercase pt-4">Cập Nhật Thông Tin Loai DV</h6>
-                            <form class="row m-4" action="./module/cf_editLoaiDV.php" method="post">
+                            <form class="row m-4" action="./model/cf_editLoaiDV.php" method="post">
                                 <div class="form-group">
                                     <label for="maloaidv" class="form-label fw-bold">Mã Loại : </label>
                                     <input type="text" class="form-control" id="maloaidv" name="maloaidv" value="<?php echo $row ['maloaidv'] ?>" readonly>
@@ -112,4 +112,4 @@
 				</div>
 			</div>
 
-<?php include('module/footter.php');?>
+<?php include('model/footter.php');?>

@@ -1,4 +1,4 @@
-<?php include_once('module/haeder.php') ?>
+<?php include_once('model/haeder.php') ?>
 <div class="main-container">
 		<div class="pd-ltr-20 xs-pd-20-10"></div>
 			<div class="min-height-100px">
@@ -18,7 +18,7 @@
 			</div>
 			<div class="card-box mb-3">
 					<?php
-						include_once(__DIR__.'/module/config.php');
+						include_once(__DIR__.'/model/config.php');
 
 						$danhsach = "SELECT * FROM tblnhacc";
 
@@ -68,7 +68,7 @@
 											<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
 											
 												<a class="dropdown-item" href="edit_Nhacc.php?sid=<?php echo $row['MaNhaCC'];?>"><i class="dw dw-edit2"></i> Cập Nhật</a>
-												<a class="dropdown-item" href="./module/cf_deleteNCC.php?sid=<?php echo $row['MaNhaCC'];?>"><i class="dw dw-delete-3"></i> Xoá</a>
+												<a class="dropdown-item" href="./model/cf_deleteNCC.php?sid=<?php echo $row['MaNhaCC'];?>"><i class="dw dw-delete-3"></i> Xoá</a>
 											</div>
 										</div>
 									</td>
@@ -81,4 +81,4 @@
 		</div>
 	</div>
 </div>
-<?php include_once('module/footter.php') ?>
+<?php include_once('model/footter.php') ?>

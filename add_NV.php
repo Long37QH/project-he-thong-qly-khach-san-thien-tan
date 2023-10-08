@@ -1,4 +1,4 @@
-<?php include('module/haeder.php') ?>
+<?php include('model/haeder.php') ?>
 <div class="mobile-menu-overlay"></div>
     <!-- bat dâu phân mên làm việc -->
 	<div class="main-container">
@@ -9,7 +9,7 @@
 				<div class="card-box mb-30 pd-20">
 					
                         <h4 class="fw-bold text-center text-uppercase">Thong Tin Nhan Vien</h4>
-                        <form class="row m-4" action="./module/cf_addNV.php" method="post">
+                        <form class="row m-4" action="./model/cf_addNV.php" method="post">
                             <div class="form-group">
                                 <label for="ma_nhanvien" class="form-label fw-bold">Ma NV : </label>
                                 <input type="text" class="form-control" id="ma_nhanvien" name="ma_nhanvien" placeholder="NV001" required>
@@ -74,7 +74,7 @@
                 <?php
                     /*
                     // nap file ket noi
-                    include_once(__DIR__.'/module/config.php');
+                    include_once(__DIR__.'/model/config.php');
                     
                     $ma_nhanvien = $TenNV = $Cmnd = $SoDT = $ChucVu = $Email = $gioitinh = $diachi = $mota = '';
 
@@ -98,4 +98,4 @@
 
                     header("Location: DS_Nhanvien.php"); */
                 ?>
-<?php include('module/footter.php') ?>
+<?php include('model/footter.php') ?>

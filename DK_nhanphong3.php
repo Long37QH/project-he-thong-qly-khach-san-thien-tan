@@ -1,10 +1,10 @@
 <?php 
-    include('module/haeder2.php');
+    include('model/haeder2.php');
 
     $maphong = $_GET['sid'];
 
-    require_once 'module/config.php';
-    //include_once(__DIR__.'/module/config.php');
+    require_once 'model/config.php';
+    //include_once(__DIR__.'/model/config.php');
 
     $sua_sql = "SELECT * FROM ttphong WHERE maphong = '$maphong'";
 
@@ -36,7 +36,7 @@
         <div class="card-box mb-30 pd-20">
             
                 <h4 class="fw-bold text-center text-uppercase">Nhập thông tin khách hàng</h4>
-                <form class="row m-4" action="module/cf_DKNphong3.php" method="post">
+                <form class="row m-4" action="model/cf_DKNphong3.php" method="post">
                     <div class="form-group">
                         <label for="tenkhachhang" class="form-label fw-bold">Tên khách hàng : </label>
                         <input type="text" class="form-control" id="tenkhachhang" name="tenkhachhang"  required>
@@ -87,5 +87,5 @@
     <!--  -->
 
 <?php 
-    include('module/footter2.php');
+    include('model/footter2.php');
 ?>

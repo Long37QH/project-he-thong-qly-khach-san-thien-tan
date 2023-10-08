@@ -1,10 +1,10 @@
 <?php 
-    include('module/haeder2.php');
+    include('model/haeder2.php');
 
     $maphong = $_GET['sid'];
 
-    require_once 'module/config.php';
-    //include_once(__DIR__.'/module/config.php');
+    require_once 'model/config.php';
+    //include_once(__DIR__.'/model/config.php');
 
     $chitietphong = "SELECT tblphong.maphong,tblphong.tenphong,tblloaiphong.tenloaiphong,tblphong.anhphong,tblloaiphong.giaphong , tblphong.mt_phong , tblphong.trangthaiphong FROM tblphong INNER JOIN tblloaiphong on tblloaiphong.maloaiphong = tblphong.maloaiphong WHERE maphong = '$maphong'";
 
@@ -64,7 +64,7 @@
 					<h4 class="mb-20">Danh sách phòng tương tự</h4>
 					<div class="product-list">
 					<?php
-						include_once(__DIR__.'/module/config.php');
+						include_once(__DIR__.'/model/config.php');
 
 						$dsnvsql = "SELECT * FROM tblphong WHERE maphong != '$maphong' AND trangthaiphong = 'Phòng Trống'";
 
@@ -154,4 +154,4 @@
 	<script src="vendors/scripts/script.min.js"></script>
 	<script src="vendors/scripts/process.js"></script>
 	<script src="vendors/scripts/layout-settings.js"></script>
-<?php include_once('module/footter2.php') ?>
+<?php include_once('model/footter2.php') ?>

@@ -1,4 +1,4 @@
-<?php include_once('module/haeder.php') ?>
+<?php include_once('model/haeder.php') ?>
 <div class="main-container">
 		<div class="pd-ltr-20 xs-pd-20-10"></div>
 			<div class="min-height-100px">
@@ -18,7 +18,7 @@
 			</div>
 			<div class="card-box mb-3">
 					<?php
-						include_once(__DIR__.'/module/config.php');
+						include_once(__DIR__.'/model/config.php');
 
 						$danhsach = "SELECT tblnhanvien.TenNV, tbltaikhoan.tentk, tbltaikhoan.pass FROM tblnhanvien INNER JOIN tbltaikhoan ON tblnhanvien.ma_nhanvien = tbltaikhoan.ma_nhanvien;";
 
@@ -64,7 +64,7 @@
 											</a>
 											<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
 												<a class="dropdown-item" href="edit_taikhoan.php?sid=<?php echo $row['tentk'];?>"><i class="dw dw-edit2"></i> Cập nhật thông tin</a>
-												<a class="dropdown-item" href="./module/cf_deletetaikhoan.php?sid=<?php echo $row['tentk'];?>"><i class="dw dw-delete-3"></i> Xóa</a>
+												<a class="dropdown-item" href="./model/cf_deletetaikhoan.php?sid=<?php echo $row['tentk'];?>"><i class="dw dw-delete-3"></i> Xóa</a>
 											</div>
 										</div>
 									</td>
@@ -77,4 +77,4 @@
 		</div>
 	</div>
 </div>
-<?php include_once('module/footter.php') ?>
+<?php include_once('model/footter.php') ?>

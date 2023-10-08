@@ -1,4 +1,4 @@
-<?php include_once('module/haeder.php') ?>
+<?php include_once('model/haeder.php') ?>
 
 <div class="mobile-menu-overlay"></div>
 
@@ -12,7 +12,7 @@
             <!-- bảng thống hê khách -->
 				<div class="card-box mb-3">
 					<?php
-						include_once(__DIR__.'/module/config.php');
+						include_once(__DIR__.'/model/config.php');
 
 						$dsnvsql = "SELECT * FROM tblnhanvien";
 
@@ -62,7 +62,7 @@
 											<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
 												<a class="dropdown-item" href="profileNV.php?sid=<?php echo $row['ma_nhanvien'];?>"><i class="dw dw-eye"></i> Xem</a>
 												<a class="dropdown-item" href="edit_NV.php?sid=<?php echo $row['ma_nhanvien'];?>"><i class="dw dw-edit2"></i> Cập Nhật</a>
-												<a onclick="return confirm('Bạn có muốn xoá thông tin này không ?');" class="dropdown-item" href="./module/cf_deleteNV.php?sid=<?php echo $row['ma_nhanvien'];?>"><i class="dw dw-delete-3"></i> Xoá</a>
+												<a onclick="return confirm('Bạn có muốn xoá thông tin này không ?');" class="dropdown-item" href="./model/cf_deleteNV.php?sid=<?php echo $row['ma_nhanvien'];?>"><i class="dw dw-delete-3"></i> Xoá</a>
 											</div>
 										</div>
 									</td>
@@ -75,4 +75,4 @@
 				<!-- Simple Datatable End -->
 				
 				<!--phân footer  -->
-<?php include_once('module/footter.php') ?>
+<?php include_once('model/footter.php') ?>

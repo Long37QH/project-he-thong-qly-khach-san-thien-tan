@@ -1,10 +1,10 @@
 <?php 
-    include('module/haeder.php');
+    include('model/haeder.php');
 
     $mavt = $_GET['sid'];
 
-    require_once 'module/config.php';
-    //include_once(__DIR__.'/module/config.php');
+    require_once 'model/config.php';
+    //include_once(__DIR__.'/model/config.php');
 
     $sua_sql = "SELECT * FROM tblvattu WHERE mavt = '$mavt'";
 
@@ -36,7 +36,7 @@
         <div class="card-box mb-30 pd-20">
             
                 <h4 class="fw-bold text-center text-uppercase">Cập nhật thông vật tư</h4>
-                <form class="row m-4" action="./module/cf_editvattu.php" method="post">
+                <form class="row m-4" action="./model/cf_editvattu.php" method="post">
                     <div class="col-md-4 form-group">
                         <label for="mavt" class="form-label fw-bold">Mã VT : </label>
                         <input type="text" class="form-control" id="mavt" name="mavt" value="<?php echo $row ['mavt'] ?>"  required>
@@ -86,4 +86,4 @@
             
         </div>
     <!--  -->
-        <?php include('module/footter.php') ?>
+        <?php include('model/footter.php') ?>

@@ -1,5 +1,5 @@
 <?php
-    include ('module/haeder.php');
+    include ('model/haeder.php');
 ?>
 <div class="mobile-menu-overlay"></div>
     <!-- bat dâu phân mên làm việc -->
@@ -24,7 +24,7 @@
         <!-- form nhap dang ký ca BT -->
         <div class="card-box mb-30 pd-20">					
                 <h5 class="fw-bold text-uppercase m-2 text-center">Đăng ký ca bảo trì</h5>
-                <form class="row m-4" action="./module/cf_addCabaotri.php" method="post">
+                <form class="row m-4" action="./model/cf_addCabaotri.php" method="post">
                     <div class=" col-md-2 form-group">
                         <label for="macabt" class="form-label fw-bold">Ma ca : </label>
                         <input type="text" class="form-control" id="macabt" name="macabt" placeholder="bt00" required>
@@ -57,7 +57,7 @@
         </div>
         <div class="card-box mb-30 pd-10">
         <?php
-            include_once(__DIR__.'/module/config.php');
+            include_once(__DIR__.'/model/config.php');
 
             $loaidvsql = "SELECT * FROM dkbaotri";
 
@@ -116,8 +116,8 @@
 									</a>
 									<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
 										<!-- <a class="dropdown-item" href="#"><i class="dw dw-eye"></i> View</a> -->
-										<a class="dropdown-item" href="module/cf_editCaBT1.php?sid=<?php echo $row['macabt'];?>"><i class="icon-copy fa fa-wrench" aria-hidden="true"></i> Nhận Ca</a>
-										<a onclick="return confirm('Bạn có muốn huỷ ca bảo trì này không ?');" class="dropdown-item" href="./module/cf_huycabt.php?sid=<?php echo $row['macabt'];?>"><i class="dw dw-delete-3"></i> Huỷ Ca </a>            
+										<a class="dropdown-item" href="model/cf_editCaBT1.php?sid=<?php echo $row['macabt'];?>"><i class="icon-copy fa fa-wrench" aria-hidden="true"></i> Nhận Ca</a>
+										<a onclick="return confirm('Bạn có muốn huỷ ca bảo trì này không ?');" class="dropdown-item" href="./model/cf_huycabt.php?sid=<?php echo $row['macabt'];?>"><i class="dw dw-delete-3"></i> Huỷ Ca </a>            
 									</div>
 								</div>
 							</td>
@@ -131,5 +131,5 @@
 
 
 <?php
-    include ('module/footter.php');
+    include ('model/footter.php');
 ?>

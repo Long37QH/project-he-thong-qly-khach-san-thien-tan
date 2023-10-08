@@ -1,5 +1,5 @@
 <?php
-    include ('module/haeder.php');
+    include ('model/haeder.php');
 ?>
 <div class="mobile-menu-overlay"></div>
     <!-- bat dâu phân mên làm việc -->
@@ -24,7 +24,7 @@
         
         <div class="card-box mb-30 pd-10">
         <?php
-            include_once(__DIR__.'/module/config.php');
+            include_once(__DIR__.'/model/config.php');
 
             $loaidvsql = "SELECT tblbaotrivt.macabt,tblbaotrivt.maphong,tblvattu.tenvattu,tblbaotrivt.mt_tinhtrang,tblbaotrivt.mt_congviec,tblnhanvien.TenNV,tblbaotrivt.trangthaica,tblbaotrivt.tg_hoanthanh
                             FROM tblbaotrivt
@@ -87,7 +87,7 @@
                             <td><?php echo $row['tg_hoanthanh']; ?></td>
                              
 							<td>
-                                <a class="btn btn-danger" href="module/cf_pheduyetca.php?sid=<?php echo $row['macabt'];?>"> Phê Duyệt <i class="icon-copy ion-checkmark-circled"></i></a>	
+                                <a class="btn btn-danger" href="model/cf_pheduyetca.php?sid=<?php echo $row['macabt'];?>"> Phê Duyệt <i class="icon-copy ion-checkmark-circled"></i></a>	
 							</td> 
 						</tr>
 						<?php endforeach; ?>
@@ -96,5 +96,5 @@
         </div>
 
 <?php
-    include ('module/footter.php');
+    include ('model/footter.php');
 ?>

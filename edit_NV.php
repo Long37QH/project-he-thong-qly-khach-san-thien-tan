@@ -1,10 +1,10 @@
 <?php 
-    include('module/haeder.php');
+    include('model/haeder.php');
 
     $ma_nhanvien = $_GET['sid'];
 
-    require_once 'module/config.php';
-    //include_once(__DIR__.'/module/config.php');
+    require_once 'model/config.php';
+    //include_once(__DIR__.'/model/config.php');
 
     $sua_sql = "SELECT * FROM tblnhanvien WHERE ma_nhanvien = '$ma_nhanvien'";
 
@@ -22,7 +22,7 @@
 				<div class="card-box mb-30 pd-20">
 					
                         <h4 class="fw-bold text-center text-uppercase">Cập nhật thông tin nhân viên</h4>
-                        <form class="row m-4" action="./module/cf_editNV.php" method="post">
+                        <form class="row m-4" action="./model/cf_editNV.php" method="post">
                             <div class="form-group">
                                 <label for="ma_nhanvien" class="form-label fw-bold">Ma NV : </label>
                                 <input type="text" class="form-control" id="ma_nhanvien" name="ma_nhanvien" value="<?php echo $row ['ma_nhanvien'] ?>" readonly>
@@ -81,4 +81,4 @@
                     
 				</div>
             <!--  -->
-                <?php include('module/footter.php') ?>
+                <?php include('model/footter.php') ?>

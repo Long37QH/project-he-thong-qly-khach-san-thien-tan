@@ -1,4 +1,4 @@
-<?php include_once('module/haeder2.php') ?>
+<?php include_once('model/haeder2.php') ?>
 <div class="main-container">
 		<div class="pd-ltr-20 xs-pd-20-10">
 			<div class="min-height-200px">
@@ -75,7 +75,7 @@
 			</div>
             <div class="card-box mb-3">
 					<?php
-						include_once(__DIR__.'/module/config.php');
+						include_once(__DIR__.'/model/config.php');
 
 						$dsnvsql = "SELECT * FROM tblphong";
 
@@ -124,7 +124,7 @@
 											<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
 												<a class="dropdown-item" href="Detail_phong2.php?sid=<?php echo $row['maphong'];?>"><i class="dw dw-eye"></i> Xem</a>
 												<!-- <a class="dropdown-item" href="edit_phong.php?sid=<?php echo $row['maphong'];?>"><i class="dw dw-edit2"></i> Cập Nhật</a>
-												<a class="dropdown-item" href="./module/cf_deletePhong.php?sid=<?php echo $row['maphong'];?>"><i class="dw dw-delete-3"></i> Xoá</a> -->
+												<a class="dropdown-item" href="./model/cf_deletePhong.php?sid=<?php echo $row['maphong'];?>"><i class="dw dw-delete-3"></i> Xoá</a> -->
 											</div>
 										</div>
 									</td>
@@ -160,4 +160,4 @@
         });
     </script>
 	
-<?php include_once('module/footter2.php') ?>
+<?php include_once('model/footter2.php') ?>

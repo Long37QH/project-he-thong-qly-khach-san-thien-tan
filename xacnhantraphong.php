@@ -1,8 +1,8 @@
-<?php include_once('module/haeder.php');
+<?php include_once('model/haeder.php');
 $makh = $_GET['sid'];
 
-require_once 'module/config.php';
-//include_once(__DIR__.'/module/config.php');
+require_once 'model/config.php';
+//include_once(__DIR__.'/model/config.php');
 
 $sua_sql = "SELECT * FROM ttnhanphong WHERE makh = '$makh'";
 
@@ -35,7 +35,7 @@ div class="mobile-menu-overlay"></div>
         <div class="card-box mb-30 pd-20">
             
                 <h4 class="fw-bold text-center text-uppercase">Thông Tin Trả Phòng</h4>
-                <form class="row m-4" action="module/cf_traphong.php" method="post">
+                <form class="row m-4" action="model/cf_traphong.php" method="post">
                 <div class="col-md-3 form-group">
                         <label for="makh" class="form-label fw-bold">Mã KH : </label>
                         <input type="text" class="form-control" id="makh" name="makh" value="<?php echo $row ['makh'] ?>" readonly>
@@ -91,4 +91,4 @@ div class="mobile-menu-overlay"></div>
             
         </div>
 
-<?php include('module/footter.php') ?>
+<?php include('model/footter.php') ?>

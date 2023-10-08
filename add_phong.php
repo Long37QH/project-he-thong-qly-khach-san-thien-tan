@@ -1,4 +1,4 @@
-<?php include_once('module/haeder.php') ?>
+<?php include_once('model/haeder.php') ?>
 <div class="main-container">
 		<div class="pd-ltr-20 xs-pd-20-10">
 			<div class="min-height-200px">
@@ -7,7 +7,7 @@
 				</div>
 				<!-- Default Basic Forms Start -->
 				<div class="pd-20 card-box mb-30">
-					<form action="./module/cf_addPhong.php" method="post">
+					<form action="./model/cf_addPhong.php" method="post">
 						<div class="form-group row">
 							<label class="col-sm-12 col-md-2 col-form-label">Mã Phòng</label>
 							<div class="col-sm-12 col-md-10">
@@ -46,4 +46,4 @@
 			</div>
 		</div>
 	</div>
-<?php include_once('module/footter.php') ?>
+<?php include_once('model/footter.php') ?>

@@ -60,7 +60,7 @@
 							<h2 class="text-center text-primary">Đăng Nhập Hệ Thống</h2>
 						</div>
 
-						<form action="./module/cf_login.php" method="post">
+						<form action="./model/cf_login.php" method="post">
 							<div class="select-role">
 								<div class="btn-group btn-group-toggle" data-toggle="buttons">
 									<label class="btn active text-center m-auto">

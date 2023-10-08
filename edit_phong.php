@@ -1,8 +1,8 @@
-<?php include_once('module/haeder.php') ;
+<?php include_once('model/haeder.php') ;
     $ma_phong = $_GET['sid'];
 
-    require_once 'module/config.php';
-    //include_once(__DIR__.'/module/config.php');
+    require_once 'model/config.php';
+    //include_once(__DIR__.'/model/config.php');
 
     $sua_sql = "SELECT * FROM tblphong WHERE maphong = '$ma_phong'";
 
@@ -18,7 +18,7 @@
 				</div>
 				<!-- Default Basic Forms Start -->
 				<div class="pd-20 card-box mb-30">
-					<form action="./module/cf_editPhong.php" method="post">
+					<form action="./model/cf_editPhong.php" method="post">
 						<div class="form-group row">
 							<label class="col-sm-12 col-md-2 col-form-label">Mã Phòng</label>
 							<div class="col-sm-12 col-md-10">
@@ -58,4 +58,4 @@
 			</div>
 		</div>
 	</div>
-<?php include_once('module/footter.php') ?>
+<?php include_once('model/footter.php') ?>

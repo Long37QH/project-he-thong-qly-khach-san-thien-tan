@@ -1,5 +1,5 @@
 <?php
-    include ('module/haeder.php');
+    include ('model/haeder.php');
 ?>
 <div class="mobile-menu-overlay"></div>
     <!-- bat dâu phân mên làm việc -->
@@ -24,7 +24,7 @@
         
         <div class="card-box mb-30 pd-10">
         <?php
-            include_once(__DIR__.'/module/config.php');
+            include_once(__DIR__.'/model/config.php');
 
             $loaidvsql = "SELECT * FROM ttdatphong";
 
@@ -91,7 +91,7 @@
 										<!-- <a class="dropdown-item" href="#"><i class="dw dw-eye"></i> View</a> -->
 										
 										<a class="dropdown-item" href="DK_nhanphong2.php?sid=<?php echo $row['makh'];?>"><i class="icon-copy dw dw-file-56"></i>Xử lý nhận phòng</a>
-                                        <a onclick="return confirm('Xác định huỷ đăng ký đặt phòng ?');" class="dropdown-item" href="./module/cf_huydatphong.php?sid=<?php echo $row['makh'];?>"><i class="dw dw-delete-3"></i>Huỷ đặt phòng</a>            
+                                        <a onclick="return confirm('Xác định huỷ đăng ký đặt phòng ?');" class="dropdown-item" href="./model/cf_huydatphong.php?sid=<?php echo $row['makh'];?>"><i class="dw dw-delete-3"></i>Huỷ đặt phòng</a>            
 									</div>
 								</div>
 							</td>
@@ -126,5 +126,5 @@
             </script>
 
 <?php
-    include ('module/footter.php');
+    include ('model/footter.php');
 ?>

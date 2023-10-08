@@ -1,10 +1,10 @@
 <?php
-    include ('module/haeder.php');
+    include ('model/haeder.php');
 
     $makh = $_GET['sid'];
 
-    require_once 'module/config.php';
-    //include_once(__DIR__.'/module/config.php');
+    require_once 'model/config.php';
+    //include_once(__DIR__.'/model/config.php');
 
     $ttsql = "SELECT * FROM ttchothanhtoan WHERE makh = '$makh' ";
 
@@ -104,7 +104,7 @@
 							</div>
 						</div>
 						<div class="d-grid gap-2 col-6 mx-auto">
-                            <a class="btn btn-success" href="./module/cf_thanhtoan.php?sid=<?php echo $row['makh'];?>"  type="button"> Hoàn thành thanh toán </a>                       
+                            <a class="btn btn-success" href="./model/cf_thanhtoan.php?sid=<?php echo $row['makh'];?>"  type="button"> Hoàn thành thanh toán </a>                       
                         </div>
 					</div>
                     
@@ -119,5 +119,5 @@
 	</script>
 			
 <?php
-    include ('module/footter.php');
+    include ('model/footter.php');
 ?>

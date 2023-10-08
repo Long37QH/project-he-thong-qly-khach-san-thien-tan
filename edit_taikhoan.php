@@ -1,10 +1,10 @@
 <?php 
-    include('module/haeder.php');
+    include('model/haeder.php');
 
     $tentk = $_GET['sid'];
 
-    require_once 'module/config.php';
-    //include_once(__DIR__.'/module/config.php');
+    require_once 'model/config.php';
+    //include_once(__DIR__.'/model/config.php');
 
     $sua_sql = "SELECT tblnhanvien.TenNV, tbltaikhoan.tentk, tbltaikhoan.pass, tblnhanvien.ma_nhanvien FROM tblnhanvien INNER JOIN tbltaikhoan ON tblnhanvien.ma_nhanvien = tbltaikhoan.ma_nhanvien WHERE tbltaikhoan.tentk = '$tentk';";
 
@@ -22,7 +22,7 @@
 				<div class="card-box mb-30 pd-20">
 					
                         <h4 class="fw-bold text-center text-uppercase">Cập nhật thông tin tài khoản</h4>
-                        <form class="row m-4" action="./module/cf_edittaikhoan.php" method="post">
+                        <form class="row m-4" action="./model/cf_edittaikhoan.php" method="post">
                             <div class="form-group">
                                 <label for="ma_nhanvien" class="form-label fw-bold">Tên Nhân Viên: </label>
                                 <input type="text" class="form-control" id="TenNV" name="TenNV" value="<?php echo $row ['TenNV'] ?>" readonly>
@@ -58,4 +58,4 @@
                     
 				</div>
             <!--  -->
-                <?php include('module/footter.php') ?>
+                <?php include('model/footter.php') ?>

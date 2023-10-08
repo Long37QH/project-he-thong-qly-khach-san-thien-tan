@@ -1,8 +1,8 @@
-<?php include_once('module/haeder.php');
+<?php include_once('model/haeder.php');
 $ma_nhanvien = $_GET['sid'];
 
-require_once 'module/config.php';
-//include_once(__DIR__.'/module/config.php');
+require_once 'model/config.php';
+//include_once(__DIR__.'/model/config.php');
 
 $sua_sql = "SELECT * FROM tblnhanvien WHERE ma_nhanvien = '$ma_nhanvien'";
 
@@ -75,7 +75,7 @@ $row = mysqli_fetch_assoc($result);
                     <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 mb-30">
 					<div class="pd-20 card-box height-100-p">
                         <h4 class="fw-bold text-center text-uppercase pt-4">Cập Nhật Thông Tin</h4>
-                        <form class="row m-4" action="./module/cf_editNV.php" method="post">
+                        <form class="row m-4" action="./model/cf_editNV.php" method="post">
                             <div class="form-group">
                                 <label for="ma_nhanvien" class="form-label fw-bold">Ma NV : </label>
                                 <input type="text" class="form-control" id="ma_nhanvien" name="ma_nhanvien" value="<?php echo $row ['ma_nhanvien'] ?>" readonly>
@@ -136,4 +136,4 @@ $row = mysqli_fetch_assoc($result);
                     <!--  -->
 				</div>
 			</div>
-<?php include('module/footter.php') ?>
+<?php include('model/footter.php') ?>

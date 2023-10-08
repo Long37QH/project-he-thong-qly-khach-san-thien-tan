@@ -1,9 +1,9 @@
 <?php
-    include ('module/haeder.php');
+    include ('model/haeder.php');
     $macabt = $_GET['sid'];
 
-    require_once 'module/config.php';
-    //include_once(__DIR__.'/module/config.php');
+    require_once 'model/config.php';
+    //include_once(__DIR__.'/model/config.php');
 
     $sua_sql = "SELECT * FROM tblbaotrivt WHERE macabt = '$macabt'";
 
@@ -34,7 +34,7 @@
         <!-- form nhap dang ký ca BT -->
         <div class="card-box mb-30 pd-20">					
                 <h5 class="fw-bold text-uppercase m-2">Nhập Thông tin ca bảo trì</h5>
-                <form class="row m-4" action="./module/cf_editCaBT2.php" method="post">
+                <form class="row m-4" action="./model/cf_editCaBT2.php" method="post">
                     <div class=" col-md-2 form-group">
                         <label for="macabt" class="form-label fw-bold">Ma ca : </label>
                         <input type="text" class="form-control" id="macabt" name="macabt" value="<?php echo $row ['macabt'] ?>"  readonly>
@@ -76,5 +76,5 @@
        
 
 <?php
-    include ('module/footter.php');
+    include ('model/footter.php');
 ?>

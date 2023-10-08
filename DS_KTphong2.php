@@ -1,7 +1,7 @@
 <?php
-    include ('module/haeder2.php');
+    include ('model/haeder2.php');
 
-    include_once(__DIR__.'/module/config.php');
+    include_once(__DIR__.'/model/config.php');
 
     $phongsql = "SELECT * FROM dsphongtrong";
 
@@ -182,5 +182,5 @@
             </script>
 
 <?php
-    include ('module/footter2.php');
+    include ('model/footter2.php');
 ?>
